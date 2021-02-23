@@ -1,0 +1,25 @@
+<h2><a class="btn btn-secondary" href="#"><i class="fa fa-plus"></i> Create New Comment</a>Project</h2>
+<br>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Sr No.</th>
+            <th>Last Follow up Date</th>
+            <th>Comment</th>
+            <th>Edit/Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td></td>
+            <td>{{this.followDate}}</td>
+            <td>{{this.comments}}</td>
+            <td>
+                <a href="#"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="#" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

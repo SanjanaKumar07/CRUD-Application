@@ -1,0 +1,60 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/employee" method="POST">
+    <input type="hidden" name="_id" value="{{employee._id}}">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Name of Developer</label>
+            <input type="text" class="form-control" name="fullName" placeholder="Name of Developer" value="{{employee.fullName}}">
+        <div class="text-danger">
+            {{employee.fullNameError}}</div>
+        </div>
+        <div class="form-group col-md-6">
+            <label>Name of Project</label>
+            <input type="text" class="form-control" name="project" placeholder="Name of Project" value="{{employee.project}}">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label>Possesion Date</label>
+            <input type="date" class="form-control" name="pDate" placeholder="Possesion Date" value="{{employee.pDate}}">
+        </div>
+        <div class="form-group col-md-8">
+            <label>Product Identified</label>
+            <input type="text" class="form-control" name="product" placeholder="Product Identified" value="{{employee.product}}">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label>Contact No.</label>
+            <input type="text" class="form-control" name="contact" placeholder="Contact No." value="{{employee.contact}}">
+        </div>
+        <div class="form-group col-md-4">
+            <label>Date when Contacted</label>
+            <input type="date" class="form-control" name="dateC" placeholder="Date when Contacted" value="{{employee.dateC}}">
+        </div>
+        <div class="form-group col-md-4">
+            <label>Location</label>
+            <input type="text" class="form-control" name="location" placeholder="Location" value="{{employee.location}}">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Client Name</label>
+            <input type="text" class="form-control" name="cName" placeholder="Client Name" value="{{employee.cName}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Last follow up Date</label>
+            <input type="date" class="form-control" name="followDate" placeholder="Last follow up date" value="{{employee.followDate}}">
+        </div>
+    </div>
+    <div class="form-row">
+        <label>Comments</label>
+        <textarea type="text" class="form-control" name="comments" placeholder="Comments" value="{{employee.comments}}"></textarea> 
+    </div>
+    <br>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/employee/list"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form>

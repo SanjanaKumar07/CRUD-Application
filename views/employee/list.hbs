@@ -1,0 +1,40 @@
+<h2><a class="btn btn-secondary" href="/employee"><i class="fa fa-plus"></i> Create New Client</a>Client List</h2>
+<br>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Sr No.</th>
+            <th>Developer Name</th>
+            <th>Project Name</th>
+            <th>Possesion Date</th>
+            <th>Product Identified</th>
+            <th>Contact No.</th>
+            <th>Contacted Date</th>
+            <th>Location</th>
+            <th>Client Name</th>
+            <th>Follow up Date</th>
+            <th>Comments</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td></td>
+            <td>{{this.fullName}}</td>
+            <td><a href="/employee/list/project" target="_blank">{{this.project}}</a></td>
+            <td>{{this.pDate}}</td>
+            <td>{{this.product}}</td>
+            <td>{{this.contact}}</td>
+            <td>{{this.dateC}}</td>
+            <td>{{this.location}}</td>
+            <td>{{this.cName}}</td>
+            <td>{{this.followDate}}</td>
+            <td>{{this.comments}}</td>
+            <td>
+                <a href="/employee/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/employee/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
